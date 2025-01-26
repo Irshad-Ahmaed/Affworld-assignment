@@ -23,8 +23,8 @@ const useAuthStore = create((set) => ({
         try {
             const res = await axiosInstance.post('/users/login', { email, password }, { withCredentials: true });
             console.log("Login");
-            set({ user: res.data.token, loading: false });
-            localStorage.setItem('userInfo', JSON.stringify(res.data));
+            set({ user: res?.data?.user?.name, loading: false });
+            localStorage.setItem('userInfo', JSON.stringify(res?.data));
         } catch (error) {
             set({ error: error.response.data.msg, loading: false });
         }
