@@ -8,9 +8,11 @@ const Login = () => {
     email: '',
     password: '',
   });
-
+  
+  const prod = import.meta.env.VITE_PRODUCTION;
+  
   const handleLogin = () => {
-    window.open('http://localhost:5000/api/auth/google', '_self');
+    window.open('https://affworld-assignment-theta.vercel.app/api/auth/google', '_self');
   };
 
   const handleChange = (e) =>{

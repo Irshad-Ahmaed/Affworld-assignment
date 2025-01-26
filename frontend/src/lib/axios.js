@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const prod = import.meta.env.VITE_PRODUCTION;
+
 const axiosInstance = axios.create({
-    baseURL: "http://localhost:5000/api",
+    baseURL: `${prod.length == 0 ? "http://localhost:5000" : prod}/api`,
     withCredentials: true, // get the access of cookies and etc. from frontend
 });
 
