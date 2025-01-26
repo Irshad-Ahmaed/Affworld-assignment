@@ -10,7 +10,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://affworld-assignment-aigv.vercel.app'],
+  origin: ['http://localhost:5173', 'https://affworld-assignment-aigv.vercel.app/'],
   credentials: true
 }));
 
